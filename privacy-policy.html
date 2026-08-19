@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tangelo — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 5rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #111;
+    background: #fff;
+  }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .25rem; }
+  h2 { font-size: 1.2rem; margin: 2.5rem 0 .5rem; }
+  h3 { font-size: 1rem; margin: 1.5rem 0 .25rem; }
+  .dateline { color: #666; margin: 0 0 2rem; font-size: .95rem; }
+  .lede { font-size: 1.05rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin: .4rem 0; }
+  a { color: #0a58ca; }
+  code { font-size: .95em; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #ddd; color: #666; font-size: .9rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #111; }
+    .dateline, footer { color: #9a9a9a; }
+    a { color: #7fb0ff; }
+    footer { border-top-color: #333; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Tangelo Privacy Policy</h1>
+<p class="dateline">Effective 18 August 2026</p>
+
+<h2>The short version</h2>
+<p class="lede">
+Tangelo has no accounts, no analytics, no advertising, and no servers of its own.
+Nothing you do in the app is reported to its developer, because there is nowhere
+for it to be reported to. Your library, your settings and your listening history
+stay on your device.
+</p>
+<p>
+The app does make network requests, but only ones you asked for: to services you
+configured yourself, or to public catalogues it queries on your behalf to find a
+piece of artwork or a set of lyrics. Those are described in detail below.
+</p>
+
+<h2>What is stored on your device</h2>
+<ul>
+  <li>Your music library database — songs, albums, artists, playlists, artwork and
+      any lyrics that have been fetched or read from your files.</li>
+  <li>Your settings and preferences.</li>
+  <li>Your play history, and the queue of pending scrobbles if you have connected a
+      scrobbling service.</li>
+  <li>Credentials: passwords and tokens for Subsonic or Jellyfin servers, a Last.fm
+      session key, a ListenBrainz token. These are held exclusively in the iOS
+      Keychain. They never leave your device except to authenticate directly
+      against the one service each belongs to.</li>
+</ul>
+<p>
+All of this lives inside the app's own sandboxed container. Nothing is backed up to
+a developer-run service. If you back up your device to iCloud or a computer, Apple's
+or your computer's backup terms govern that copy, not this policy.
+</p>
+
+<h2>Your media library</h2>
+<p>
+With your permission, Tangelo reads your Media &amp; Apple Music library so those
+songs appear alongside your local files. That access is read-only and stays on the
+device: the app builds its own index and does not transmit your library anywhere.
+</p>
+<p>
+Playback of Apple Music content happens through Apple's own system media service,
+and purchases happen through the App Store. Apple's privacy policy governs both.
+Tangelo has no visibility into your Apple Music account or your purchase details —
+for an in-app purchase it can see only whether an unlock is owned, which it reads
+back from the App Store on your device.
+</p>
+
+<h2>Requests the app makes for you</h2>
+<p>
+Each of these sends only what the request itself needs, and keeps the answer in the
+app's local cache. None of it passes through any server operated by Tangelo's
+developer, and none of it is retained by the developer, because the developer never
+receives it.
+</p>
+
+<h3>Subsonic and Jellyfin servers</h3>
+<p>
+If you add a server, the app connects directly to the address you entered, using the
+credentials you entered, to browse and stream your music. Where the server is, who
+runs it, and what it logs are matters between you and that server.
+</p>
+
+<h3>Internet radio</h3>
+<p>
+Station search and browsing query the public
+<a href="https://www.radio-browser.info/">radio-browser.info</a> directory, which
+receives your search terms. Playing a station then connects your device directly to
+that station's stream, so the station's own host sees the connection.
+</p>
+
+<h3>Podcasts</h3>
+<p>
+Podcast feeds and episodes are fetched directly from the hosts of the feeds you add.
+Those hosts see the request in the same way any podcast app's request would be seen.
+</p>
+
+<h3>Lyrics</h3>
+<p>
+When you open the lyrics view for a song that has no lyrics embedded in the file and
+none already cached, the app asks
+<a href="https://lrclib.net/">lrclib.net</a> for them, sending the track title,
+artist, album and duration so the right lyrics can be matched. If nothing is found,
+that result is cached too, so the same song is not asked about twice.
+</p>
+
+<h3>Album artwork</h3>
+<p>
+When an album has no artwork embedded in its files and none cached, the app looks it
+up by album and artist name at
+<a href="https://musicbrainz.org/">MusicBrainz</a> and the
+<a href="https://coverartarchive.org/">Cover Art Archive</a>, and at Apple's public
+iTunes Search API. Only those names are sent, and the image is stored locally once
+found.
+</p>
+
+<h3>Scrobbling</h3>
+<p>
+Scrobbling is off unless you turn it on and connect an account. If you do, the app
+sends what you played — track, artist, album, and the time you played it — directly
+to your own account at <a href="https://www.last.fm/">Last.fm</a> or
+<a href="https://listenbrainz.org/">ListenBrainz</a>, using the credentials you
+authorised. Nothing is sent to anyone else, and the developer never sees it. What
+those services do with your listening history is governed by their own privacy
+policies.
+</p>
+
+<h2>Children</h2>
+<p>
+Tangelo does not collect personal information from anyone, including children. It
+has no accounts, no messaging and no user-generated content.
+</p>
+
+<h2>Deleting your data</h2>
+<p>
+Deleting the app removes everything it stored on your device: the library database,
+your settings, your play history, cached artwork and lyrics, and every credential it
+held in the Keychain. There is no developer-side copy to request or delete, because
+none was ever made.
+</p>
+<p>
+Scrobbles you already sent are held by the service that received them. To remove
+those, use that service's own tools — Last.fm and ListenBrainz each let you delete
+listens from your account. Disconnecting scrobbling in Tangelo stops new ones and
+discards the local credentials, but cannot reach back into a third-party account.
+</p>
+
+<h2>Changes to this policy</h2>
+<p>
+If the app gains a new network destination or a new category of stored data, this
+page is updated before that version ships, and the effective date above changes with
+it.
+</p>
+
+<h2>Contact</h2>
+<p>
+Questions about this policy, or about anything the app does with data:
+<a href="mailto:support@dionyang.com">support@dionyang.com</a>.
+</p>
+
+<footer>
+Tangelo is an independent app and is not affiliated with, endorsed by, or sponsored
+by Apple Inc. Apple Music is a trademark of Apple Inc.
+</footer>
+
+</body>
+</html>
